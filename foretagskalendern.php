@@ -1,35 +1,73 @@
-
-
 <?php
 /**
- * Plugin Name: Företagskalendern
- *Plugin URI: http://www.fortnox.se
- * Description: Håll koll på alla viktiga datum
- * Version: 0.0.1
- * Author: Joachim, Nakleh
- * Author URI: http://bachstatter.se 
- * License: Fortnox hejsan svejsan
+ * The WordPress Plugin Boilerplate.
+ *
+ * A foundation off of which to build well-documented WordPress plugins that
+ * also follow WordPress Coding Standards and PHP best practices.
+ *
+ * @package   Företagskalendern
+ * @author    joachim.bachstatter@fortnox.com
+ * @license   GPL-2.0+
+ * @link      http://fortnox.com
+ * @copyright 2014 Fortnox
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Företagskalendern
+ * Plugin URI:        @TODO
+ * Description:       Håll koll på alla dina viktiga datum
+ * Version:           0.1
+ * Author:            Joachim Bachstätter
+ * Author URI:        @TODO
+ * Text Domain:       plugin-name-locale
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/bachstatter/foretagskalendern
  */
 
-
-/*
-function mitt_lilla_plugin_add_code ( $content ) {  //Funktionen tar emot ett värde nämligen $content. Dvs innehållet i inlägget.
-
-    // Vi vill bara lägga till koden på enskilda inlägg
-    if ( is_single() ) { 
-
-        //lägger till koden i slutet av inlägget
-        $content .= 'Klistra in din kod eller något annat innehåll'; // Vi lägger till koden genom .= för att inte skriva över allt innehåll.
-
-    }
-
-    // returnera det nya innehållet
-    return $content;
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
 
-//lägga till ett filter som aktiverar vår filtreringsfunktion
-add_filter( 'the_content', 'mitt_lilla_plugin_add_code' );
+/*----------------------------------------------------------------------------*
+ * Public-Facing Functionality
+ *----------------------------------------------------------------------------*/
 
-*/
-?>
+require_once( plugin_dir_path( __FILE__ ) . 'public/class-foretagskalendern.php' );
 
+/*
+ * Register hooks that are fired when the plugin is activated or deactivated.
+ * When the plugin is deleted, the uninstall.php file is loaded.
+ */
+register_activation_hook( __FILE__, array( 'Foretagskalendern', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'Foretagskalendern', 'deactivate' ) );
+
+
+add_action( 'plugins_loaded', array( 'Foretagskalendern', 'get_instance' ) );
+
+/*----------------------------------------------------------------------------*
+ * Dashboard and Administrative Functionality
+ *----------------------------------------------------------------------------*/
+
+/*
+	Vi behöver inte köra ajax i adminpanelen? //jocke
+ *
+ * If you want to include Ajax within the dashboard, change the following
+ * conditional to:
+ *
+ * if ( is_admin() ) {
+ *   ...
+ * }
+ *
+ * The code below is intended to to give the lightest footprint possible.
+
+if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+
+	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-foretagskalendern-admin.php' );
+	add_action( 'plugins_loaded', array( 'Foretagskalendern_Admin', 'get_instance' ) );
+
+}
+
+Uncomment admin page for testing
+ */

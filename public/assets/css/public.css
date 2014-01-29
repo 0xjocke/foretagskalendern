@@ -1,0 +1,7 @@
+/* This stylesheet is used to style the public-facing components of the plugin. */
+.fk-row input, .fk-row select{
+	margin-top:5px;
+}
+#fk-downloadlink{
+	display: none;
+}
