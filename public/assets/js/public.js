@@ -18,7 +18,7 @@
 			})
 			.done(function() {
 				console.log("success");
-				$('#fk-downloadlink').css('display', 'block');
+				$('#fk-downloadlink').css('display', 'block').attr('href', pluginPath + '/foretagskalendern/public/php/makepdf.php' );
 			})
 			.fail(function() {
 				console.log("error");

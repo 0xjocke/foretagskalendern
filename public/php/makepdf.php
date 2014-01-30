@@ -1,18 +1,24 @@
-
- <!doctype html>
- <html lang="en">
- <head>
- 	<meta charset="UTF-8">
- 	<title>Haj</title>
- </head>
+<?php
+ 
+require_once "../includes/dompdf/dompdf_config.inc.php";
+ 
+$dompdf = new DOMPDF();
+ 
+$html = <<<'ENDHTML'
+<html>
  <body>
- 	<?php 
+  <h1>Hello Dompdf</h1>
+ </body>
+</html>
+ENDHTML;
+ 
+$dompdf->load_html($html);
+$dompdf->render();
+ 
+$dompdf->stream("hello.pdf");
 
- 	//Make a pdf file save it
- 	//
- 	var_dump($_POST);
+
+
+
 
  ?>
- <p>Hej</p>
- </body>
- </html>
