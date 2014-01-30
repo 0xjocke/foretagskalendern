@@ -1,20 +1,20 @@
-<form action="" id="fk-form">
+<form method="post" action="" id="fk-form">
 	<div class="fk-row">
 	     <label for="">Företagsnamn</label><br>
-	     <input type="text" placeholder="Företagsnamn" required>
+	     <input name="name" type="text" placeholder="Företagsnamn" required>
 	</div>
 	<div class="fk-row">
 	     <label for="">Momsperiod</label><br>
-	     <select name="" id="" required>
+	     <select name="momsperiod" id="" required>
 	     	<option value=""></option>
-	     	<option value="">Månadsvis</option>
-	     	<option value="">Kvartalsvis</option>
-	     	<option value="">Årsvis</option>
+	     	<option value="1">Månadsvis</option>
+	     	<option value="2">Kvartalsvis</option>
+	     	<option value="3">Årsvis</option>
 	     </select>
 	</div>
 	<div class="fk-row">
 	     <label for="">Senast inläming tidsrapport</label><br>
-	     <input type="text" placeholder="Tidsrapport" required>
+	     <input name="timeReport" type="text" placeholder="Tidsrapport" required>
 	</div>
 	<div class="fk-row">
 	     <input type="submit" id="fk-btn">
