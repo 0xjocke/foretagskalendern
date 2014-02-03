@@ -87,10 +87,11 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
+  left: 1cm;
 }
 
 /*Kalender*/
-/* line 71, ../../../sass/pdf.scss */
+/* line 72, ../../../sass/pdf.scss */
 .calendar-table {
   margin: 1cm auto;
   font-family: sans-serif;
@@ -100,7 +101,7 @@ p {
   overflow: auto;
   display: block;
 }
-/* line 79, ../../../sass/pdf.scss */
+/* line 80, ../../../sass/pdf.scss */
 .calendar-table th {
   background-color: #70c469;
   font-weight: normal;
@@ -108,22 +109,22 @@ p {
   padding: 10px 15px;
   text-align: center;
 }
-/* line 86, ../../../sass/pdf.scss */
+/* line 87, ../../../sass/pdf.scss */
 .calendar-table td {
   background-color: #eeeeee;
   padding: 5px 7.5px;
   color: #6f6f6f;
 }
-/* line 91, ../../../sass/pdf.scss */
+/* line 92, ../../../sass/pdf.scss */
 .calendar-table .calendar-datum {
   padding: 2px;
   text-align: center;
 }
-/* line 95, ../../../sass/pdf.scss */
+/* line 96, ../../../sass/pdf.scss */
 .calendar-table .calendar-dark {
   background: #999999;
 }
-/* line 98, ../../../sass/pdf.scss */
-.calendar-table .calendar-light {
+/* line 99, ../../../sass/pdf.scss */
+.calendar-table .fk-todo {
   background: #ffcccc;
 }
