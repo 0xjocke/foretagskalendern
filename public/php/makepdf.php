@@ -22,23 +22,46 @@ $pdf->setPageOptions(array(
 $guid = uniqid();
 
 
-if (isset($_POST['name'])) {
+
+if (isset($_POST['timeReport']) && isset($_POST['name']) && isset($_POST['momsperiod']) ) {
 
 	// Add a page. To override above page defaults, you could add
 	// another $options array as second argument.
-	$html = file_get_contents('../views/pdf/pdf.html');
-	$html_with_values = str_replace('%name%', $_POST['name'], $html);
+	$html = file_get_contents("../views/pdf/pdf.html");
+
+	//TimeReport
+	$html_with_values = str_replace("<td><!--fk-".$_POST['timeReport']."-", "<td class='fk-todo'>Tidr<!--fk-".$_POST['timeReport']."-", $html);
+
+	// $html_with_values = str_replace("<!--fk-".$_POST['timeReport']."-", "Tidr<!--", $html);
 	
+	//Name
+	$html_with_values = str_replace('%name%', $_POST['name'], $html_with_values);
+	
+	//Moms
+	if ($_POST['momsperiod'] == 1) {
+		$html_with_values = str_replace('<td><!--fk-16-jan', "<td class='fk-todo'>Moms<!--fk-16-jan", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-16-aug', "<td class='fk-todo'>Moms<!--fk-16-feb", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms<!--fk-16-mar", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-mar', "<td class='fk-todo'>Moms<!--fk-16-apr", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-apr', "<td class='fk-todo'>Moms<!--fk-16-maj", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms<!--fk-16-jun", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-jun', "<td class='fk-todo'>Moms<!--fk-16-jul", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-jul', "<td class='fk-todo'>Moms<!--fk-16-aug", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-sep', "<td class='fk-todo'>Moms<!--fk-16-sep", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-okt', "<td class='fk-todo'>Moms<!--fk-16-okt", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms<!--fk-16-nov", $html_with_values);
+		$html_with_values = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms<!--fk-16-dec", $html_with_values);
+	}
 
 	file_put_contents('../views/pdf/build/pdf'.$guid.'.html', $html_with_values);
-	}
-	echo $guid;
+}
+echo $guid;
 
-	if (isset($_GET['guid'])) {
+if (isset($_GET['guid'])) {
 		# code...
 	$pdf->addPage('../views/pdf/build/pdf'.$_GET['guid'].'.html');
 
 	$pdf->send();
-	}
+}
 
  ?>
