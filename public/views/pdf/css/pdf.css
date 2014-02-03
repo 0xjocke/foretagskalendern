@@ -14,75 +14,81 @@ body {
   font-family: 'Raleway';
 }
 
-/* line 18, ../../../sass/pdf.scss */
+/* line 23, ../../../sass/pdf.scss */
+body > * {
+  font-size: 85%;
+  line-height: 1.3em;
+}
+
+/* line 27, ../../../sass/pdf.scss */
 h1 {
   font-size: 3rem;
 }
 
-/* line 22, ../../../sass/pdf.scss */
+/* line 31, ../../../sass/pdf.scss */
 h2 {
   font-size: 2rem;
 }
 
-/* line 25, ../../../sass/pdf.scss */
+/* line 34, ../../../sass/pdf.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 28, ../../../sass/pdf.scss */
+/* line 37, ../../../sass/pdf.scss */
 p {
   font-size: 14px;
 }
 
-/* line 32, ../../../sass/pdf.scss */
+/* line 41, ../../../sass/pdf.scss */
 .clearfix {
   *zoom: 1;
 }
 
-/* line 32, ../../../sass/pdf.scss */
+/* line 41, ../../../sass/pdf.scss */
 .clearfix:before, .clearfix:after {
   display: table;
   line-height: 0;
   content: "";
 }
 
-/* line 32, ../../../sass/pdf.scss */
+/* line 41, ../../../sass/pdf.scss */
 .clearfix:after {
   clear: both;
 }
 
 /* Printable area */
-/* line 35, ../../../sass/pdf.scss */
+/* line 44, ../../../sass/pdf.scss */
 #print-area {
   position: relative;
   top: 1cm;
-  left: 1cm;
+  left: 0.5cm;
   width: 19cm;
   height: 27.6cm;
   font-size: 10px;
 }
 
-/* line 45, ../../../sass/pdf.scss */
+/* line 54, ../../../sass/pdf.scss */
 .header {
   height: 4cm;
 }
-/* line 47, ../../../sass/pdf.scss */
+/* line 56, ../../../sass/pdf.scss */
 .header h1 {
   margin-top: 0.5cm;
 }
-/* line 50, ../../../sass/pdf.scss */
+/* line 59, ../../../sass/pdf.scss */
 .header h3 {
   font-style: italic;
 }
-/* line 54, ../../../sass/pdf.scss */
+/* line 63, ../../../sass/pdf.scss */
 .header img {
-  position: fixed;
-  top: 0.5cm;
+  position: absolute;
+  top: 0;
   width: 4.5cm;
-  right: 1.5cm;
+  right: 0.5cm;
 }
 
-/* line 62, ../../../sass/pdf.scss */
+/* line 71, ../../../sass/pdf.scss */
 .footer {
   position: absolute;
   bottom: 0;
@@ -91,17 +97,18 @@ p {
 }
 
 /*Kalender*/
-/* line 72, ../../../sass/pdf.scss */
+/* line 81, ../../../sass/pdf.scss */
 .calendar-table {
-  margin: 1cm auto;
+  margin: 1cm 0;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 115%;
   width: auto;
   overflow: auto;
   display: block;
+  letter-spacing: 0.0825em;
 }
-/* line 80, ../../../sass/pdf.scss */
+/* line 90, ../../../sass/pdf.scss */
 .calendar-table th {
   background-color: #70c469;
   font-weight: normal;
@@ -109,22 +116,22 @@ p {
   padding: 10px 15px;
   text-align: center;
 }
-/* line 87, ../../../sass/pdf.scss */
+/* line 97, ../../../sass/pdf.scss */
 .calendar-table td {
   background-color: #eeeeee;
   padding: 5px 7.5px;
   color: #6f6f6f;
 }
-/* line 92, ../../../sass/pdf.scss */
+/* line 102, ../../../sass/pdf.scss */
 .calendar-table .calendar-datum {
-  padding: 2px;
+  padding: 2px 5px;
   text-align: center;
 }
-/* line 96, ../../../sass/pdf.scss */
+/* line 106, ../../../sass/pdf.scss */
 .calendar-table .calendar-dark {
   background: #999999;
 }
-/* line 99, ../../../sass/pdf.scss */
+/* line 109, ../../../sass/pdf.scss */
 .calendar-table .fk-todo {
   background: #ffcccc;
 }

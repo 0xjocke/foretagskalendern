@@ -6,6 +6,9 @@
 			this.name = values[0].value;
 			this.momsperiod = values[1].value;
 			this.timeReport = values[2].value;
+			this.financialStatement = values[3].value;
+			this.extra = values[4].value;
+			this.extraDate = values[5].value;
 		
 		}
 	
@@ -14,7 +17,7 @@
 			$.ajax({
 				url: pluginPath + '/foretagskalendern/public/php/makepdf.php',
 				type: 'POST',
-				data: {'name': this.name, 'momsperiod':this.momsperiod, 'timeReport': this.timeReport},
+				data: {'name': this.name, 'momsperiod':this.momsperiod, 'financialStatement' : this.financialStatement, 'timeReport': this.timeReport, 'extra' : this.extra, 'extraDate': this.extraDate},
 			})
 			.done(function(guid) {
 				console.log("success");
