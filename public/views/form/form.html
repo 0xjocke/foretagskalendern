@@ -13,11 +13,11 @@
 	     </select>
 	</div>
 	<div class="fk-row">
-	     <label for="">Senast inläming tidsrapport</label><br>
-	     <input name="timeReport" type="text" placeholder="Tidsrapport" required>
+	     <label for="">Senast inläming tidsrapport dag (1-31)</label><br>
+	     <input type="number" name="timeReport" min="1" max="31" required>
 	</div>
 	<div class="fk-row">
 	     <input type="submit" id="fk-btn">
 	</div>
 </form> 
-<a href="" id="fk-downloadlink">Ladda ner din pdf</a>
+<a href="" id="fk-downloadlink"><button>Ladda ner din pdf</button></a>
