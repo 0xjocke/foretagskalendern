@@ -63,6 +63,7 @@ p{
     position:   absolute;
     bottom:     0;
     width:      100%;
+    left: 1cm;
 }
 
 
@@ -95,7 +96,7 @@ p{
     .calendar-dark{
         background: darken(white, 40%);
     }
-    .calendar-light{
+    .fk-todo{
         background: lighten(red, 40%);
     }
 }
