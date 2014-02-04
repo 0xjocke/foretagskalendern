@@ -1,7 +1,7 @@
 
 <?php
 	require_once '../includes/WkHtmlToPdf.php';
-	require_once '../includes/PDF_Creator.php';
+	require_once '../includes/PDF_creator.php';
 
 
 	// Create a new WKHtmlToPdf object with some global PDF options
@@ -29,25 +29,25 @@
 		if ($_POST['timeReport'] == 12 && $_POST['momsperiod'] == 1) {
 			$pdf_creator->add_moms_and_time_12();
 		//If moms every month and timereport on 16th
-		}elseif ($_POST['timeReport'] == 16 && $_POST['momsperiod'] == 1){
-			$pdf_creator->add_moms_and_time_16();
-		}else{
-			// if Timereport not 0
-			if ($_POST['timeReport'] != 0) {
-				$pdf_creator->add_time_report($_POST['timeReport']);
-			}
-			
-			//Moms
-			if ($_POST['momsperiod'] == 1) {
-				$pdf_creator->add_momsperiod_month();
-			}
-			if ($_POST['momsperiod'] == 2) {
-				$pdf_creator->add_momsperiod_quarter();
-			}
-			if ($_POST['momsperiod'] == 3) {
-				$pdf_creator->add_momsperiod_year();
-			}
+		}elseif ($_POST['timeReport'] == 17 && $_POST['momsperiod'] == 1){
+			$pdf_creator->add_moms_and_time_17();
 		}
+		// if Timereport not 0
+		if ($_POST['timeReport'] != 0) {
+			$pdf_creator->add_time_report($_POST['timeReport']);
+		}
+		
+		//Moms
+		if ($_POST['momsperiod'] == 1) {
+			$pdf_creator->add_momsperiod_month();
+		}
+		if ($_POST['momsperiod'] == 2) {
+			$pdf_creator->add_momsperiod_quarter();
+		}
+		if ($_POST['momsperiod'] == 3) {
+			$pdf_creator->add_momsperiod_year();
+		}
+		
 		if (isset($_POST['financialStatement'])) {
 			$pdf_creator->add_financial_statement($_POST['financialStatement']);
 		}
