@@ -16,14 +16,7 @@ body {
     font-family: 'Raleway';
 
 }
-body {
 
-}
-
-body>* {
-  font-size: 85%;
-  line-height: 1.3em;
-}
 h1{
     font-size: 3rem;
 
@@ -52,7 +45,7 @@ p{
 }
 
 .header {
-    height:     4cm;
+    margin-bottom: 20px;
     h1{
         margin-top: 0.5cm;
     }
@@ -68,21 +61,14 @@ p{
     }
 }
 
-.footer {
-    position:   absolute;
-    bottom:     0;
-    width:      100%;
-    left: 1cm;
-}
-
 
 /*Kalender*/
 
-.calendar-table {
+.fk-table {
     margin: 1cm 0;
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 115%;
+    font-size: 90%;
     width: auto;
     overflow: auto;
     display: block;
@@ -99,11 +85,11 @@ p{
         padding: 5px 7.5px;
         color: rgb(111, 111, 111);
     }
-    .calendar-datum{
+    .fk-datum{
         padding:2px 5px;
         text-align: center;
     }
-    .calendar-dark{
+    .fk-dark{
         background: darken(white, 40%);
     }
     .fk-todo{
