@@ -2,10 +2,14 @@
 
 .fk-row{
 	margin: 12px 0;
+
 }
+
 .fk-row input, .fk-row select{
 	margin-top:5px;
+	width: 200px;
 }
-#fk-downloadlink{
+#fk-pdflink, #fk-icallink {
 	display: none;
+	margin: 10px 10px 10px :;
 }
