@@ -18,7 +18,7 @@
 				$day = "0".$day;
 			}
 			$this->timeday = $day;
-			$this->html = str_replace("<td><!--fk-".$day."-", "<td class='fk-todo'>Tidsrapp<!--fk-".$day."-", $this->html);
+			$this->html = str_replace("<td><!--fk-".$day."-", "<td class='fk-todo'>Tidsrapport<!--fk-".$day."-", $this->html);
 		}
 		function add_name(){
 			$this->html = str_replace('%name%', $_POST['name'], $this->html);
@@ -39,7 +39,7 @@
 			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms<!--fk-12-dec", $this->html);
 		}
 		function add_momsperiod_year(){
-			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms<!--fk-12-feb", $this->html);
+			$this->html = str_replace('<td><!--fk-26-feb', "<td class='fk-todo'>Moms<!--fk-26-feb", $this->html);
 
 		}
 		function add_momsperiod_quarter(){
@@ -48,21 +48,21 @@
 			$this->html = str_replace('<td><!--fk-18-aug', "<td class='fk-todo'>Moms<!--fk-18-aug", $this->html);
 			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms<!--fk-12-nov", $this->html);
 		}
-		function add_moms_and_time_16(){
-			$this->html = str_replace('<td><!--fk-17-jan', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-17-jan", $this->html);
-			$this->html = str_replace('<td><!--fk-17-aug', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-17-aug", $this->html);
+		function add_moms_and_time_17(){
+			$this->html = str_replace('<td><!--fk-17-jan', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-jan", $this->html);
+			$this->html = str_replace('<td><!--fk-17-aug', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-aug", $this->html);
 		}
 		function add_moms_and_time_12(){
-			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-feb", $this->html);
-			$this->html = str_replace('<td><!--fk-12-mar', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-mar", $this->html);
-			$this->html = str_replace('<td><!--fk-12-apr', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-apr", $this->html);
-			$this->html = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-maj", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jun', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-jun", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jul', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-jul", $this->html);
-			$this->html = str_replace('<td><!--fk-12-sep', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-sep", $this->html);
-			$this->html = str_replace('<td><!--fk-12-okt', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-okt", $this->html);
-			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-nov", $this->html);
-			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms,<br>Tidsrapp <!--fk-12-dec", $this->html);
+			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-feb", $this->html);
+			$this->html = str_replace('<td><!--fk-12-mar', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-mar", $this->html);
+			$this->html = str_replace('<td><!--fk-12-apr', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-apr", $this->html);
+			$this->html = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-maj", $this->html);
+			$this->html = str_replace('<td><!--fk-12-jun', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-jun", $this->html);
+			$this->html = str_replace('<td><!--fk-12-jul', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-jul", $this->html);
+			$this->html = str_replace('<td><!--fk-12-sep', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-sep", $this->html);
+			$this->html = str_replace('<td><!--fk-12-okt', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-okt", $this->html);
+			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-nov", $this->html);
+			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-dec", $this->html);
 		}
 		
 		function add_financial_statement($type){
@@ -71,36 +71,36 @@
 					$this->financialtime[0] = '01';
 					$this->financialtime[1] = 'nov';
 					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-nov',',<br> Deklara <!--', $this->html);
+						$this->html = str_replace('<!--fk-01-nov',',<br> Deklaration <!--', $this->html);
 					}else{
-						$this->html = str_replace('<td><!--fk-01-nov',"<td class='fk-todo'>Deklara <!--", $this->html);
+						$this->html = str_replace('<td><!--fk-01-nov',"<td class='fk-todo'>Deklaration <!--", $this->html);
 					}
 					break;
 				case '2':
 					$this->financialtime[0] = '11';
 					$this->financialtime[1] = 'dec';
 					if ($this->timeday == 15) {
-						$this->html = str_replace('<!--fk-15-dec',',<br> Deklara', $this->html);
+						$this->html = str_replace('<!--fk-15-dec',',<br> Deklaration', $this->html);
 					}else{
-						$this->html = str_replace('<td><!--fk-15-dec',"<td class='fk-todo'>Deklara <!--", $this->html);
+						$this->html = str_replace('<td><!--fk-15-dec',"<td class='fk-todo'>Deklaration <!--", $this->html);
 					}
 					break;
 				case '3':
 					$this->financialtime[0] = '01';
 					$this->financialtime[1] = 'mar';
 					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-mar',',<br> Deklara', $this->html);
+						$this->html = str_replace('<!--fk-01-mar',',<br> Deklaration', $this->html);
 					}else{
-						$this->html = str_replace('<td><!--fk-01-mar',"<td class='fk-todo'>Deklara <!--", $this->html);
+						$this->html = str_replace('<td><!--fk-01-mar',"<td class='fk-todo'>Deklaration <!--", $this->html);
 					}
 					break;
 				case '4':
 					$this->financialtime[0] = '01';
 					$this->financialtime[1] = 'jul';
 					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-jul',',<br> Deklara', $this->html);
+						$this->html = str_replace('<!--fk-01-jul',',<br> Deklaration', $this->html);
 					}else{
-						$this->html = str_replace('<td><!--fk-01-jul',"<td class='fk-todo'>Deklara <!--", $this->html);
+						$this->html = str_replace('<td><!--fk-01-jul',"<td class='fk-todo'>Deklaration <!--", $this->html);
 					}
 					break;	
 				
