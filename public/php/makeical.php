@@ -1,11 +1,11 @@
 <?php
 
-
+require_once '../includes/Base_Model.php';
 require_once '../includes/Ical_creator.php';
 
 if ($_POST['timeReport']) {
-	$ical_creator = new Ical_creator;
-	$ical_creator->timereport($_POST['timeReport']);
+	$ical_creator = new Ical_creator($_POST);
+	$ical_creator->timereport();
 	$ical_creator->create_ical();
 }
 	

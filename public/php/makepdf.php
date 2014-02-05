@@ -1,6 +1,7 @@
 
 <?php
 	require_once '../includes/WkHtmlToPdf.php';
+	require_once '../includes/Base_Model.php';
 	require_once '../includes/PDF_creator.php';
 
 
@@ -22,7 +23,8 @@
 
 	if (isset($_POST['timeReport']) && isset($_POST['name']) && isset($_POST['momsperiod']) ) {
 
-		$pdf_creator = new PDF_Creator;
+		$pdf_creator = new PDF_creator($_POST);
+
 		$pdf_creator->add_name();
 		
 		//If moms every month and timereport on 12th
@@ -34,7 +36,7 @@
 		}
 		// if Timereport not 0
 		if ($_POST['timeReport'] != 0) {
-			$pdf_creator->add_time_report($_POST['timeReport']);
+			$pdf_creator->add_time_report();
 		}
 		
 		//Moms
@@ -49,7 +51,7 @@
 		}
 		
 		if (isset($_POST['financialStatement'])) {
-			$pdf_creator->add_financial_statement($_POST['financialStatement']);
+			$pdf_creator->add_declaration();
 		}
 		// have to call finacialStatement before..
 		if (isset($_POST['extraDate'])) {
@@ -71,5 +73,4 @@
 
 		$pdf->send();
 	}
-
  ?>

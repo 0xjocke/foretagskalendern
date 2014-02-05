@@ -2,28 +2,29 @@
 	/**
 	* PDF Creator class
 	*/
-	class PDF_Creator{
-		public $html, $guid, $timeday;
-		public $financialtime = array();
+	class PDF_creator extends Base_Model{
+		public $name, $momsperiod, $financialStatement;
+		public $timeReport, $extra, $extraDate;
+		public $declaration_day, $declaration_month;
+		public $html, $guid;
 		
-		function __construct(){
+		
+		function __construct(array $attributes){
+			parent::__construct($attributes);
 			$this->html = file_get_contents("../views/pdf/pdf.html");
 			$this->guid = uniqid();
 		}
+		
 		function get_guid(){
 			return $this->guid;
 		}
-		function add_time_report($day){
-			if (strlen($day) == 1) {
-				$day = "0".$day;
-			}
-			$this->timeday = $day;
-			$this->html = str_replace("<td><!--fk-".$day."-", "<td class='fk-todo'>Tidsrapport<!--fk-".$day."-", $this->html);
-		}
 		function add_name(){
 			$this->html = str_replace('%name%', $_POST['name'], $this->html);
-
 		}
+		function add_time_report(){
+			$this->html = str_replace("<td><!--fk-".$this->timeReport."-", "<td class='fk-todo'>Tidsrapport<!--fk-".$this->timeReport."-", $this->html);
+		}
+		
 		function add_momsperiod_month(){
 			$this->html = str_replace('<td><!--fk-17-jan', "<td class='fk-todo'>Moms<!--fk-17-jan", $this->html);
 			$this->html = str_replace('<td><!--fk-17-aug', "<td class='fk-todo'>Moms<!--fk-17-aug", $this->html);
@@ -65,49 +66,13 @@
 			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-dec", $this->html);
 		}
 		
-		function add_financial_statement($type){
-			switch ($type) {
-				case '1':
-					$this->financialtime[0] = '01';
-					$this->financialtime[1] = 'nov';
-					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-nov',',<br> Deklaration <!--', $this->html);
-					}else{
-						$this->html = str_replace('<td><!--fk-01-nov',"<td class='fk-todo'>Deklaration <!--", $this->html);
-					}
-					break;
-				case '2':
-					$this->financialtime[0] = '11';
-					$this->financialtime[1] = 'dec';
-					if ($this->timeday == 15) {
-						$this->html = str_replace('<!--fk-15-dec',',<br> Deklaration', $this->html);
-					}else{
-						$this->html = str_replace('<td><!--fk-15-dec',"<td class='fk-todo'>Deklaration <!--", $this->html);
-					}
-					break;
-				case '3':
-					$this->financialtime[0] = '01';
-					$this->financialtime[1] = 'mar';
-					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-mar',',<br> Deklaration', $this->html);
-					}else{
-						$this->html = str_replace('<td><!--fk-01-mar',"<td class='fk-todo'>Deklaration <!--", $this->html);
-					}
-					break;
-				case '4':
-					$this->financialtime[0] = '01';
-					$this->financialtime[1] = 'jul';
-					if ($this->timeday == 01) {
-						$this->html = str_replace('<!--fk-01-jul',',<br> Deklaration', $this->html);
-					}else{
-						$this->html = str_replace('<td><!--fk-01-jul',"<td class='fk-todo'>Deklaration <!--", $this->html);
-					}
-					break;	
-				
-				default:
-					return;
-					break;
-			}
+		function add_declaration(){
+			$this->fiscal_year_to_declaration();
+			if ($this->declaration_day == $this->timeReport ) {
+				$this->html = str_replace('<!--fk-'.$this->declaration_day.'-'.$this->declaration_month,',<br> Deklaration <!--', $this->html);
+			}else{
+				$this->html = str_replace('<td><!--fk-'.$this->declaration_day.'-'.$this->declaration_month,"<td class='fk-todo'>Deklaration <!--", $this->html);
+			}	
 		}
 	
 		function add_extra($date, $extra){
@@ -156,7 +121,7 @@
 			}
 			//if day is 12, 18, same as timereport, same as declaratuion, add without adding fk-todo class.
 			//else add data and fk-todo class.
-			if ($day == 12 || $day == 18 || $day == $this->timeday || $day == $this->financialtime[0] && $month == $this->financialtime[1]) {
+			if ($day == 12 || $day == 17 || $day == $this->timeReport || $day == $this->financialtime[0] && $month == $this->financialtime[1]) {
 				$this->html = str_replace('<!--fk-'.$day.'-'.$month, ',<br>' . $extra . "<!--".$day.'-'.$month , $this->html);
 			}else{
 				$this->html = str_replace('<td><!--fk-'.$day.'-'.$month, "<td class='fk-todo'>". $extra . "<!--" , $this->html);
