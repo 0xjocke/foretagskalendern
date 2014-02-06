@@ -4,6 +4,10 @@
 	margin: 12px 0;
 
 }
+.fk-row label{
+	display: block;
+	margin-top: 20px;
+}
 
 .fk-row input, .fk-row select{
 	margin-top:5px;
