@@ -50,16 +50,14 @@
 			$pdf_creator->add_momsperiod_year();
 		}
 		
-		if (isset($_POST['financialStatement'])) {
-			$pdf_creator->add_declaration();
+		if (isset($_POST['fiscalYearEnd'])) {
+			echo $pdf_creator->add_declaration();
+
 		}
 		// have to call finacialStatement before..
 		if (isset($_POST['extraDate'])) {
-			$pdf_creator->add_extra($_POST['extraDate'],$_POST['extra']);
+			$pdf_creator->add_extra();
 		}
-
-
-
 
 		//save to file
 		$pdf_creator->put_contents();
