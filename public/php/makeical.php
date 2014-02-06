@@ -3,11 +3,32 @@
 require_once '../includes/Base_Model.php';
 require_once '../includes/Ical_creator.php';
 
-if ($_POST['timeReport']) {
-	$ical_creator = new Ical_creator($_POST);
-	$ical_creator->timereport();
+	if ($_POST['timeReport']) {
+		echo "hej";
+		$ical_creator = new Ical_creator($_POST);
+		$ical_creator->add_timereport();
+	}
+	if ($_POST['fiscalYearEnd']) {
+		$ical_creator->add_declaration();
+	}
+
+	if ($_POST['momsperiod'] == 1) {
+		$ical_creator->add_momsperiod_month();
+	}
+
+	if ($_POST['momsperiod'] == 2) {
+		$ical_creator->add_momsperiod_quarter();
+	}
+
+	if ($_POST['momsperiod'] == 3) {
+		$ical_creator->add_momsperiod_year();
+	}
+	if ($_POST['extra']) {
+		$ical_creator->add_extra();
+	}
+
 	$ical_creator->create_ical();
-}
+
 	
 
 
