@@ -5,44 +5,49 @@
 	</div>
 	<div class="fk-row">
 	    <label for="">Momsperiod</label>
-		<select name="momsperiod" id="" required>
+		<select name="momsperiod" id="momsperiod" required>
 	     	<option value=""></option>
 	     	<option value="1">Månadsvis</option>
 	     	<option value="2">Kvartalsvis</option>
 	     	<option value="3">Årsvis</option>
 	     </select>
 	</div>
+	<div class="fk-row hideToggle">
+		<label>Redovisar du momsen med papper eller elektroniskt? </label>
+		<select name="paperMoms" id="" required>
+			<option value="no" ></option>
+			<option value="yes">Papper</option>
+			<option value="no">Elektroniskt</option>
+		</select>
+	</div>
+	<div class="fk-row hideToggle">
+		<label>Har du handlat med ett annat Eu-land?</label>
+		<select name="eu" id="" required>
+			<option value="no" ></option>
+			<option value="yes">Ja</option>
+			<option value="no">Nej</option>
+		</select>
+	</div>
 	<div class="fk-row">
 	    <label for="">Senast inlämning tidsrapport dag 0-31 (0 = ingen tidsrapportering)</label>
 		<input type="number" name="timeReport" min="0" max="31" required>
-	</div>
-	<div class="fk-row">
-	    <label for="">Räkenskapsår start</label>
-	    <input type="date" name="fiscalYearStart" min="0" max="31">
 	</div>
 	<div class="fk-row">
 		<label for="">Räkenskapsår slut</label>
 	    <input type="date" name="fiscalYearEnd" min="0" max="31">
 	</div>
 	<div class="fk-row">
-		<label>Har du handlat med ett annat Eu-land?</label>
-		<select name="eu" id="" required>
-			<option value="" ></option>
-			<option value="yes">Ja</option>
-			<option value="no">Nej</option>
-		</select>
+		<label for="">Vill du lämna deklaration med papper eller elektroniskt?</label>
+	    <select name="paperDec" id="">
+	    	<option value=""></option>
+	    	<option value="yes">Papper</option>
+	    	<option value="no">Elektroniskt</option>
+	    </select>
 	</div>
+	
 	<div class="fk-row">
-		<label>Vill du deklarera med papper eller elektroniskt? </label>
-		<select name="paper" id="" required>
-			<option value="" ></option>
-			<option value="yes">Papper</option>
-			<option value="no">Elektroniskt</option>
-		</select>
-	</div>
-	<div class="fk-row">
-	    <label for="">Något annat du vill komma ihåg? (använd en förkortning på max 5 bokstäver)</label>
-		<input type="text" name="extra" maxlength="5 " title="Max 5 bokstäver">
+	    <label for="">Något annat du vill komma ihåg?</label>
+		<input type="text" name="extra" maxlength="11" title="Max 5 bokstäver">
 	     <input type="date" name="extraDate" min="0" max="31">
 	</div>
 
