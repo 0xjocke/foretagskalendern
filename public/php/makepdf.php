@@ -51,8 +51,7 @@
 		}
 		
 		if (isset($_POST['fiscalYearEnd'])) {
-			echo $pdf_creator->add_declaration();
-
+			$pdf_creator->add_declaration();
 		}
 		// have to call finacialStatement before..
 		if (isset($_POST['extraDate'])) {

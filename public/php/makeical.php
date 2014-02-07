@@ -4,7 +4,6 @@ require_once '../includes/Base_Model.php';
 require_once '../includes/Ical_creator.php';
 
 	if ($_POST['timeReport']) {
-		echo "hej";
 		$ical_creator = new Ical_creator($_POST);
 		$ical_creator->add_timereport();
 	}

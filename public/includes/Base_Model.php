@@ -49,9 +49,9 @@ class Base_Model{
 		}
 		// elseif jan-apr
 		elseif ($this->fiscalYearEnd == '2014-01-31' ||
-			$this->fiscalYearEnd == '2014-02-28' ||
-			$this->fiscalYearEnd == '2014-03-31' ||
-			$this->fiscalYearEnd == '2014-04-30') {
+				$this->fiscalYearEnd == '2014-02-28' ||
+				$this->fiscalYearEnd == '2014-03-31' ||
+				$this->fiscalYearEnd == '2014-04-30') {
 				if ($this->paperDec == 'yes') {
 					$this->declaration_day = '01';
 					$this->declaration_month = 'nov';
@@ -104,7 +104,7 @@ class Base_Model{
 				}elseif ($this->paperMoms == 'yes' && $this->eu == 'no') {
 					$this->moms_payment_year = '12-jul';
 				}// have to check otherwise nov and okt could be wrong
-				elseif($this->eu == 'no'){
+				elseif($this->eu == 'no' || $this->paperMoms == 'no'){
 					$this->moms_payment_year = '17-aug';
 				}
 				break;

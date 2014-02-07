@@ -249,7 +249,7 @@ class Foretagskalendern {
 
 	public function style_and_script(){
           wp_enqueue_style( 'form.css', plugins_url() . "/foretagskalendern/public/views/form/css/form.css" );
-          wp_enqueue_script( 'public.js', plugins_url() . "/foretagskalendern/public/js/public.js", array('jquery'));
+          wp_enqueue_script( 'public.js', plugins_url() . "/foretagskalendern/public/js/build/public.js", array('jquery'));
           $plugindir = plugins_url();
           wp_localize_script('public.js', 'fk_plugin_url', array('directory' => __($plugindir))); 
      } 

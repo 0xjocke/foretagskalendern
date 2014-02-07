@@ -47,7 +47,7 @@
 		}
 		function add_momsperiod_year(){
 			$this->set_moms_year();
-			$this->html = str_replace('<td><!--fk-'. $this->moms_payment_year, "<td class='fk-todo'>Moms<!--fk-<!--fk-" . $this->moms_payment_year, $this->html);
+			$this->html = str_replace('<td><!--fk-'. $this->moms_payment_year, "<td class='fk-todo'>Moms<!--fk-" . $this->moms_payment_year, $this->html);
 
 		}
 		function add_momsperiod_quarter(){

@@ -5,50 +5,56 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            options: {
-                livereload: true,
-            },
             compass: {
                 files: ['sass/**/*.scss'],
                 tasks: ['compass:dev']
-         },
+            },
             js: {
-                files: ['public_html/js/**/*.js'],
-                tasks: ['uglify']
+                files: ['js/*.js'],
+                tasks: ['concat:all']
             }
         },
         compass: {
             dev: {
-                options: {            
+                options: {
                     sassDir: 'sass',
                     cssDir: 'views/pdf/css'
                 }
             },
             prod: {
                 options: {
-                    require: 'susy',                            
                     sassDir: 'sass',
-                    cssDir: 'public_html/css',
+                    cssDir: 'views/pdf/css',
                     environment: 'production',
-                    outputStyle: 'compressed',
-                    relativeAssets: true
+                    outputStyle: 'compressed'
                 }
             }
         },
-        livereload: {
-            // Here we watch the files the sass task will compile to
-            // These files are sent to the live reload server after sass compiles to them
-            options: { livereload: true },
-            files: ['views/**/*'],
+        concat: {
+            all: {
+                src: ['js/header.js',
+                    'js/Foretagskalendern.js',
+                    'js/Validator.js',
+                    'js/eventchecker.js',
+                    'js/footer.js'],
+                dest: 'js/build/public.js'    //output
+            }
+        },
+        uglify:{
+            prod: {
+                files: {'js/build/public.js': 'js/build/public.js'}    //output
+            }
         }
-
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['watch', 'compass:dev']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('prod', ['compass:prod','uglify:prod']);
 
 };
