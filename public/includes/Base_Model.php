@@ -16,38 +16,56 @@ class Base_Model{
 		}
 	}
 	function fiscal_year_to_declaration(){
-		
+		//maj-jun
 		if ($this->fiscalYearEnd == '2013-05-31' ||
 			$this->fiscalYearEnd == '2013-06-30') {
-				$this->declaration_day = '15';
-				$this->declaration_month = 'jan';
+				if ($this->paperDec == 'no') {
+					$this->declaration_day = '15';
+					$this->declaration_month = 'jan';
+				}//if paper yes paid last year	
 		}//juli-aug 2013
 		elseif ($this->fiscalYearEnd == '2013-07-31' ||
 			$this->fiscalYearEnd == '2013-08-31') {
-				$this->declaration_day = '01';
-				$this->declaration_month = 'apr';
+				if ($this->paperDec == 'yes') {
+					$this->declaration_day = '01';
+					$this->declaration_month = 'mar';
+				}else{
+					$this->declaration_day = '01';
+					$this->declaration_month = 'apr';
+				}
+		}
+		// sept-dec
+		elseif ($this->fiscalYearEnd == '2013-09-30' ||
+				$this->fiscalYearEnd == '2013-10-31' ||
+				$this->fiscalYearEnd == '2013-11-30' ||
+				$this->fiscalYearEnd == '2013-12-31') {
+				if ($this->paperDec == 'yes') {
+					$this->declaration_day = '01';
+					$this->declaration_month = 'jul';
+				}else{
+					$this->declaration_day = '01';
+					$this->declaration_month = 'aug';
+				}
 		}
 		// elseif jan-apr
 		elseif ($this->fiscalYearEnd == '2014-01-31' ||
 			$this->fiscalYearEnd == '2014-02-28' ||
 			$this->fiscalYearEnd == '2014-03-31' ||
 			$this->fiscalYearEnd == '2014-04-30') {
-				$this->declaration_day = '01';
-				$this->declaration_month = 'nov';	
+				if ($this->paperDec == 'yes') {
+					$this->declaration_day = '01';
+					$this->declaration_month = 'nov';
+				}else{
+					$this->declaration_day = '01';
+					$this->declaration_month = 'dec';
+				}	
 		}//if maj-juni
 		elseif ($this->fiscalYearEnd == '2014-05-31' ||
 				$this->fiscalYearEnd == '2014-06-30') {
-					$this->declaration_day = '11';
-					$this->declaration_month = 'dec';
-		}//if jul-aug
-		elseif ($this->fiscalYearEnd == '2014-07-31' ||
-				$this->fiscalYearEnd == '2014-08-31') {
-					$this->declaration_day = '01';
-					$this->declaration_month = 'mar';
-		}//else okt-dec
-		else{
-			$this->declaration_day = '01';
-			$this->declaration_month = 'jul';
+					if ($this->paperDec == 'yes') {
+						$this->declaration_day = '15';
+						$this->declaration_month = 'dec';
+					}//if no paper 2015-15-jan
 		}
 	}
 	
@@ -56,7 +74,7 @@ class Base_Model{
 			case '2013-05-31':
 			case '2013-06-30':
 				if ($this->eu == 'no') {
-					if ($this->paper == 'no') {
+					if ($this->paperMoms == 'no') {
 						$this->moms_payment_year = '17-jan';
 					} // else 27dec last year
 				}// if eu yes last year
@@ -64,7 +82,7 @@ class Base_Model{
 			case '2013-07-31':
 			case '2013-08-31':
 				if ($this->eu == 'no') {
-					if ($this->paper == 'yes') {
+					if ($this->paperMoms == 'yes') {
 						$this->moms_payment_year = '12-mar';
 					}else{
 						$this->moms_payment_year = '12-apr';	
@@ -83,7 +101,7 @@ class Base_Model{
 				if ($this->eu == 'yes' && $this->fiscalYearEnd == '2013-12-31') {
 					$this->moms_payment_year = '26-feb';
 					break;
-				}elseif ($this->paper == 'yes' && $this->eu == 'no') {
+				}elseif ($this->paperMoms == 'yes' && $this->eu == 'no') {
 					$this->moms_payment_year = '12-jul';
 				}// have to check otherwise nov and okt could be wrong
 				elseif($this->eu == 'no'){
@@ -117,7 +135,7 @@ class Base_Model{
 					$this->moms_payment_year = '26-jul';
 					break;
 				}
-				if ($this->paper == 'no') {
+				if ($this->paperMoms == 'no') {
 					$this->moms_payment_year = '12-dec';
 				}else{
 					$this->moms_payment_year = '12-nov';
