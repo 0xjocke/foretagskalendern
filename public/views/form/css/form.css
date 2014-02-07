@@ -15,5 +15,9 @@
 }
 #fk-pdflink, #fk-icallink {
 	display: none;
-	margin: 10px 10px 10px :;
+	margin: 10px 10px 10px 0;
+}
+
+.hideToggle{
+	display: none;
 }
