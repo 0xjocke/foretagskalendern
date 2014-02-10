@@ -1,11 +1,11 @@
 <form method="post" action="" id="fk-form">
 	<div class="fk-row">
-	    <label for="namn">Företagsnamn</label>
-		<input name="name" id="namn" type="text" placeholder="Företagsnamn" required>
+	    <label for="namn">Företagsnamn *</label>
+		<input name="name" id="namn" type="text" class="fk-required" placeholder="Företagsnamn" required>
 	</div>
 	<div class="fk-row">
-	    <label for="">Momsperiod</label>
-		<select name="momsperiod" id="momsperiod" required>
+	    <label for="">Momsperiod * </label>
+		<select name="momsperiod" id="momsperiod" class="fk-required" required>
 	     	<option value=""></option>
 	     	<option value="1">Månadsvis</option>
 	     	<option value="2">Kvartalsvis</option>
@@ -13,32 +13,33 @@
 	     </select>
 	</div>
 	<div class="fk-row hideToggle">
-		<label>Redovisar du momsen med papper eller elektroniskt? </label>
-		<select name="paperMoms" id="" required>
+		<label>Redovisar du momsen med papper eller elektroniskt? * </label>
+		<select name="paperMoms" class="fk-required" required>
 			<option value="no" ></option>
 			<option value="yes">Papper</option>
 			<option value="no">Elektroniskt</option>
 		</select>
 	</div>
 	<div class="fk-row hideToggle">
-		<label>Har du handlat med ett annat Eu-land?</label>
-		<select name="eu" id="" required>
+		<label>Har du handlat med ett annat Eu-land? * </label>
+		<select name="eu" class="fk-required" required>
 			<option value="no" ></option>
 			<option value="yes">Ja</option>
 			<option value="no">Nej</option>
 		</select>
 	</div>
 	<div class="fk-row">
-	    <label for="">Senast inlämning tidsrapport dag 0-31 (0 = ingen tidsrapportering)</label>
-		<input type="number" name="timeReport" min="0" max="31" required>
+	    <label for="">Senast inlämning tidsrapport dag 0-31 (0 = ingen tidsrapportering) * </label>
+		<input type="number" name="timeReport" class="fk-required" min="0" max="31" required>
 	</div>
 	<div class="fk-row">
-		<label for="">Räkenskapsår slut</label>
-	    <input type="date" name="fiscalYearEnd" min="0" max="31">
+		<label for="fiscalYear">Räkenskapsår slut * </label>
+		<p id="fk-wrongDate">Räkenskaps året måste sluta den sista dagen i månaden</p>
+	    <input type="date" id="fiscalYear" name="fiscalYearEnd" class="fk-required" min="0" max="31">
 	</div>
 	<div class="fk-row">
-		<label for="">Vill du lämna deklaration med papper eller elektroniskt?</label>
-	    <select name="paperDec" id="">
+		<label for="">Vill du lämna deklaration med papper eller elektroniskt? * </label>
+	    <select name="paperDec" class="fk-required">
 	    	<option value=""></option>
 	    	<option value="yes">Papper</option>
 	    	<option value="no">Elektroniskt</option>
@@ -52,6 +53,7 @@
 	</div>
 
 	<div class="fk-row">
+		<p id="fk-emptyfield">Fyll i alla fält med *</p>
 	     <input type="submit" id="fk-btn">
 	</div>
 </form> 

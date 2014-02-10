@@ -21,3 +21,13 @@
 .hideToggle{
 	display: none;
 }
+#fk-wrongDate{
+	display: none;
+	color:red;
+	margin-bottom: 10px;
+}
+#fk-emptyfield{
+	display: none;
+	color:red;
+	margin-bottom: 10px;
+}

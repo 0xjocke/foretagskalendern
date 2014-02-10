@@ -2,7 +2,6 @@
 	/**
 	* PDF Creator class
 	*/
-	require_once 'Base_Model.php';
 	class PDF_creator extends Base_Model{
 		// From input field
 		public $name, $momsperiod, $timeReport;
