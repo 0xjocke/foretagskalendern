@@ -34,47 +34,30 @@ p {
   font-size: 14px;
 }
 
-/* line 34, ../../../sass/pdf.scss */
-.clearfix {
-  *zoom: 1;
-}
-
-/* line 34, ../../../sass/pdf.scss */
-.clearfix:before, .clearfix:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-
-/* line 34, ../../../sass/pdf.scss */
-.clearfix:after {
-  clear: both;
-}
-
 /* Printable area */
-/* line 37, ../../../sass/pdf.scss */
+/* line 35, ../../../sass/pdf.scss */
 #print-area {
   position: relative;
   top: 1cm;
-  left: 0.5cm;
   width: 19cm;
   height: 27.6cm;
+  margin-left: 0.5cm;
   font-size: 10px;
 }
 
-/* line 47, ../../../sass/pdf.scss */
+/* line 44, ../../../sass/pdf.scss */
 .header {
   margin-bottom: 20px;
 }
-/* line 49, ../../../sass/pdf.scss */
+/* line 46, ../../../sass/pdf.scss */
 .header h1 {
   margin-top: 0.5cm;
 }
-/* line 52, ../../../sass/pdf.scss */
+/* line 49, ../../../sass/pdf.scss */
 .header h3 {
   font-style: italic;
 }
-/* line 56, ../../../sass/pdf.scss */
+/* line 53, ../../../sass/pdf.scss */
 .header img {
   position: absolute;
   top: 0;
@@ -83,7 +66,7 @@ p {
 }
 
 /*Kalender*/
-/* line 67, ../../../sass/pdf.scss */
+/* line 64, ../../../sass/pdf.scss */
 .fk-table {
   margin: 1cm 0;
   font-family: sans-serif;
@@ -94,7 +77,7 @@ p {
   display: block;
   letter-spacing: 0.0825em;
 }
-/* line 76, ../../../sass/pdf.scss */
+/* line 73, ../../../sass/pdf.scss */
 .fk-table th {
   background-color: #70c469;
   font-weight: normal;
@@ -102,22 +85,29 @@ p {
   padding: 10px 15px;
   text-align: center;
 }
-/* line 83, ../../../sass/pdf.scss */
+/* line 80, ../../../sass/pdf.scss */
 .fk-table td {
+  position: relative;
   background-color: #eeeeee;
   padding: 5px 7.5px;
   color: #6f6f6f;
 }
-/* line 88, ../../../sass/pdf.scss */
+/* line 85, ../../../sass/pdf.scss */
+.fk-table td div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 91, ../../../sass/pdf.scss */
 .fk-table .fk-datum {
   padding: 2px 5px;
   text-align: center;
 }
-/* line 92, ../../../sass/pdf.scss */
+/* line 95, ../../../sass/pdf.scss */
 .fk-table .fk-dark {
   background: #999999;
 }
-/* line 95, ../../../sass/pdf.scss */
+/* line 98, ../../../sass/pdf.scss */
 .fk-table .fk-todo {
   background: #ffcccc;
 }
