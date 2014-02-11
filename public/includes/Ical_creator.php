@@ -34,11 +34,10 @@ class Ical_creator extends Base_Model{
 	}
 	function add_declaration(){
 		$this->fiscal_year_to_declaration();
-		$month = $this->date_convertion_to_number($this->declaration_month);
 		$this->ical->NewEvent();
 		$this->ical->SetTitle('Deklaration');
 		$this->ical->SetDescription('Sista dagen att lämna in deklaration');
-		$this->ical->SetDates('2014-'. $month .'-'. $this->declaration_day . ' 12:00', '2014-'. $month .'-' . $this->declaration_day .  ' 23:59');
+		$this->ical->SetDates('2014-'. $this->declaration_month .'-'. $this->declaration_day . ' 12:00', '2014-'. $this->declaration_month .'-' . $this->declaration_day .  ' 23:59');
 
 		$this->ical->SetAlarm();
 		$this->ical->SetAlarmText('Dags att lämna in Deklaration');
@@ -95,9 +94,8 @@ class Ical_creator extends Base_Model{
 	function add_momsperiod_year(){
 		$this->set_moms_year();
 		$day = substr($this->moms_payment_year, 0, 2);
-		$month_as_letters = substr($this->moms_payment_year, 3);
+		$month = substr($this->moms_payment_year, 3);
 		// get month and convert it to numbers
-		$month = $this->date_convertion_to_number($month_as_letters);
 
 		$this->ical->NewEvent();
 		$this->ical->SetTitle('Moms');

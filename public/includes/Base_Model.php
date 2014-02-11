@@ -16,56 +16,56 @@ class Base_Model{
 		}
 	}
 	function fiscal_year_to_declaration(){
-		//maj-jun
+		//05-06
 		if ($this->fiscalYearEnd == '2013-05-31' ||
 			$this->fiscalYearEnd == '2013-06-30') {
 				if ($this->paperDec == 'no') {
 					$this->declaration_day = '15';
-					$this->declaration_month = 'jan';
+					$this->declaration_month = '01';
 				}//if paper yes paid last year	
-		}//juli-aug 2013
+		}//07i-08 2013
 		elseif ($this->fiscalYearEnd == '2013-07-31' ||
 			$this->fiscalYearEnd == '2013-08-31') {
 				if ($this->paperDec == 'yes') {
 					$this->declaration_day = '01';
-					$this->declaration_month = 'mar';
+					$this->declaration_month = '03';
 				}else{
 					$this->declaration_day = '01';
-					$this->declaration_month = 'apr';
+					$this->declaration_month = '04';
 				}
 		}
-		// sept-dec
+		// 09t-12
 		elseif ($this->fiscalYearEnd == '2013-09-30' ||
 				$this->fiscalYearEnd == '2013-10-31' ||
 				$this->fiscalYearEnd == '2013-11-30' ||
 				$this->fiscalYearEnd == '2013-12-31') {
 				if ($this->paperDec == 'yes') {
 					$this->declaration_day = '01';
-					$this->declaration_month = 'jul';
+					$this->declaration_month = '07';
 				}else{
 					$this->declaration_day = '01';
-					$this->declaration_month = 'aug';
+					$this->declaration_month = '08';
 				}
 		}
-		// elseif jan-apr
+		// elseif 01-04
 		elseif ($this->fiscalYearEnd == '2014-01-31' ||
 				$this->fiscalYearEnd == '2014-02-28' ||
 				$this->fiscalYearEnd == '2014-03-31' ||
 				$this->fiscalYearEnd == '2014-04-30') {
 				if ($this->paperDec == 'yes') {
 					$this->declaration_day = '01';
-					$this->declaration_month = 'nov';
+					$this->declaration_month = '11';
 				}else{
 					$this->declaration_day = '01';
-					$this->declaration_month = 'dec';
+					$this->declaration_month = '12';
 				}	
-		}//if maj-juni
+		}//if 05-06i
 		elseif ($this->fiscalYearEnd == '2014-05-31' ||
 				$this->fiscalYearEnd == '2014-06-30') {
 					if ($this->paperDec == 'yes') {
 						$this->declaration_day = '15';
-						$this->declaration_month = 'dec';
-					}//if no paper 2015-15-jan
+						$this->declaration_month = '12';
+					}//if no paper 2015-15-01
 		}
 	}
 	
@@ -75,7 +75,7 @@ class Base_Model{
 			case '2013-06-30':
 				if ($this->eu == 'no') {
 					if ($this->paperMoms == 'no') {
-						$this->moms_payment_year = '17-jan';
+						$this->moms_payment_year = '17-01';
 					} // else 27dec last year
 				}// if eu yes last year
 				break;
@@ -83,62 +83,62 @@ class Base_Model{
 			case '2013-08-31':
 				if ($this->eu == 'no') {
 					if ($this->paperMoms == 'yes') {
-						$this->moms_payment_year = '12-mar';
+						$this->moms_payment_year = '12-03';
 					}else{
-						$this->moms_payment_year = '12-apr';	
+						$this->moms_payment_year = '12-04';	
 					}
 				}// if eu yes last year
 				break;
 			case '2013-09-30':
 			case '2013-10-31':
 			case '2013-11-30':
-				// if eu yes and nov. no break if not.
+				// if eu yes and 11. no break if not.
 				if ($this->eu == 'yes' && $this->fiscalYearEnd == '2013-11-30') {
-					$this->moms_payment_year = '26-jan';
+					$this->moms_payment_year = '26-01';
 					break;
 				}
 			case '2013-12-31':
 				if ($this->eu == 'yes' && $this->fiscalYearEnd == '2013-12-31') {
-					$this->moms_payment_year = '26-feb';
+					$this->moms_payment_year = '26-02';
 					break;
 				}elseif ($this->paperMoms == 'yes' && $this->eu == 'no') {
-					$this->moms_payment_year = '12-jul';
-				}// have to check otherwise nov and okt could be wrong
+					$this->moms_payment_year = '12-07';
+				}// have to check otherwise 11 and 10 could be wrong
 				elseif($this->eu == 'no' || $this->paperMoms == 'no'){
-					$this->moms_payment_year = '17-aug';
+					$this->moms_payment_year = '17-08';
 				}
 				break;
 			// check all if eu then 2 month ahead
 			//otherwise all have same date, depending on paper/electrnoic 
 			case '2014-01-31':
 				if ($this->eu == 'yes') {
-					$this->moms_payment_year = '26-mar';
+					$this->moms_payment_year = '26-03';
 					break;
 				}
 			case '2014-02-28':
 				if ($this->eu == 'yes') {
-					$this->moms_payment_year = '26-apr';
+					$this->moms_payment_year = '26-04';
 					break;
 				}
 			case '2014-02-29':
 				if ($this->eu == 'yes') {
-					$this->moms_payment_year = '26-maj';
+					$this->moms_payment_year = '26-05';
 					break;
 				}
 			case '2014-03-31':
 				if ($this->eu == 'yes') {
-					$this->moms_payment_year = '26-jun';
+					$this->moms_payment_year = '26-06';
 					break;
 				}
 			case '2014-04-30':
 				if ($this->eu == 'yes') {
-					$this->moms_payment_year = '26-jul';
+					$this->moms_payment_year = '26-07';
 					break;
 				}
 				if ($this->paperMoms == 'no') {
-					$this->moms_payment_year = '12-dec';
+					$this->moms_payment_year = '12-12';
 				}else{
-					$this->moms_payment_year = '12-nov';
+					$this->moms_payment_year = '12-11';
 				}
 				break;
 			default:
@@ -146,91 +146,45 @@ class Base_Model{
 				break;
 		}
 	}
-	function date_conversion($month){
+	public function num_to_letters_month($month){
 		switch ($month) {
 			case '01':
-				return 'jan';
+				return 'Januari';
 				break;
 			case '02':
-				return 'feb';
+				return 'Februari';
 				break;
 			case '03':
-				return 'mar';
+				return 'Mars';
 				break;
 			case '04':
-				return 'apr';
+				return 'April';
 				break;
 			case '05':
-				return 'maj';
+				return 'Maj';
 				break;
 			case '06':
-				return 'jun';
+				return 'Juni';
 				break;
 			case '07':
-				return 'jul';
+				return 'Juli';
 				break;
 			case '08':
-				return 'aug';
+				return 'Augusti';
 				break;
 			case '09':
-				return 'sep';
+				return 'September';
 				break;
 			case '10':
-				return 'okt';
+				return 'Oktober';
 				break;
 			case '11':
-				return 'nov';
+				return 'November';
 				break;
 			case '12':
-				return 'dec';
+				return 'December';
 				break;
-			default:
-				return;	
-				break;
-		}	
-	}
-	function date_convertion_to_number($month){
-		switch ($month) {
-			case 'jan':
-				return '01';
-				break;
-			case 'feb':
-				return '02';
-				break;
-			case 'mar':
-				return '03';
-				break;
-			case 'apr':
-				return '04';
-				break;
-			case 'maj':
-				return '05';
-				break;
-			case 'jun':
-				return '06';
-				break;
-			case 'jul':
-				return '07';
-				break;
-			case 'aug':
-				return '08';
-				break;
-			case 'sep':
-				return '09';
-				break;
-			case 'okt':
-				return '10';
-				break;
-			case 'nov':
-				return '11';
-				break;
-			case 'dec':
-				return '12';
-				break;
-			default:
-				return;	
-				break;
-		}	
+		}
 	}
 }
 ?>
