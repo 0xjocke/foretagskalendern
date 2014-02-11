@@ -31,16 +31,13 @@ p{
     font-size:14px
 }
 
-.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}
-
 /* Printable area */
 #print-area {
-    position:   relative;
+   position:   relative;
     top:        1cm;
-    left:       0.5cm;
     width:      19cm;
     height:     27.6cm;
-
+	margin-left: 0.5cm;
     font-size:      10px;
 }
 
@@ -81,9 +78,15 @@ p{
         text-align: center;
     }
     td {
+    	position: relative;
         background-color: rgb(238, 238, 238);
         padding: 5px 7.5px;
         color: rgb(111, 111, 111);
+        div{
+        	position: absolute;
+        	top: 0;
+        	right: 0;
+        }
     }
     .fk-datum{
         padding:2px 5px;
