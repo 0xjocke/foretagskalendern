@@ -18,7 +18,10 @@
 	margin: 10px 10px 10px 0;
 }
 
-.hideToggle{
+.hideToggleMoms{
+	display: none;
+}
+.hideTogglePdf{
 	display: none;
 }
 #fk-wrongDate{
