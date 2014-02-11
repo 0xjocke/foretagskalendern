@@ -17,13 +17,21 @@
 
 	// Set default page options for all following pages
 	$pdf->setPageOptions(array(
-	    'disable-smart-shrinking',
-	    'user-style-sheet' => '../views/pdf/css/pdf.css',
-	));
+	    'disable-smart-shrinking'));
+
+	if (isset($_POST['name'])) {
+		$pdf_creator = new PDF_creator($_POST);
+		if ($_POST['pdfMonth'] == 'yes') {
+			if ($_POST['pdfSpecificMonth'] !== 'no' && $_POST['pdfSpecificYear'] !== 'no') {
+				$pdf_creator->draw_calendar_month($_POST['pdfSpecificMonth'],$_POST['pdfSpecificYear'] );	
+			}else{
+				$pdf_creator->draw_calendar_month();
+			}
+		}
+	}
 
 	if (isset($_POST['timeReport']) && isset($_POST['name']) && isset($_POST['momsperiod']) ) {
 
-		$pdf_creator = new PDF_creator($_POST);
 
 		$pdf_creator->add_name();
 		
@@ -67,7 +75,6 @@
 	if (isset($_GET['guid'])) {
 			# code...
 		$pdf->addPage('../views/pdf/build/pdf'.$_GET['guid'].'.html');
-
 		$pdf->send();
 	}
  ?>
