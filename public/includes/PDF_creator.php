@@ -31,18 +31,18 @@
 		}
 		
 		function add_momsperiod_month(){
-			$this->html = str_replace('<td><!--fk-17-jan', "<td class='fk-todo'>Moms<!--fk-17-jan", $this->html);
-			$this->html = str_replace('<td><!--fk-17-aug', "<td class='fk-todo'>Moms<!--fk-17-aug", $this->html);
-			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms<!--fk-12-feb", $this->html);
-			$this->html = str_replace('<td><!--fk-12-mar', "<td class='fk-todo'>Moms<!--fk-12-mar", $this->html);
-			$this->html = str_replace('<td><!--fk-12-apr', "<td class='fk-todo'>Moms<!--fk-12-apr", $this->html);
-			$this->html = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms<!--fk-12-maj", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jun', "<td class='fk-todo'>Moms<!--fk-12-jun", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jul', "<td class='fk-todo'>Moms<!--fk-12-jul", $this->html);
-			$this->html = str_replace('<td><!--fk-12-sep', "<td class='fk-todo'>Moms<!--fk-12-sep", $this->html);
-			$this->html = str_replace('<td><!--fk-12-okt', "<td class='fk-todo'>Moms<!--fk-12-okt", $this->html);
-			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms<!--fk-12-nov", $this->html);
-			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms<!--fk-12-dec", $this->html);
+			$this->html = str_replace('<td><!--fk-17-01', "<td class='fk-todo'>Moms för Nov<!--fk-17-01", $this->html);
+			$this->html = str_replace('<td><!--fk-17-08', "<td class='fk-todo'>Moms för Jun<!--fk-17-08", $this->html);
+			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms för Dec<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><!--fk-12-03', "<td class='fk-todo'>Moms för Jan<!--fk-12-03", $this->html);
+			$this->html = str_replace('<td><!--fk-12-04', "<td class='fk-todo'>Moms för Feb<!--fk-12-04", $this->html);
+			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms för Mar<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><!--fk-12-06', "<td class='fk-todo'>Moms för Apr<!--fk-12-06", $this->html);
+			$this->html = str_replace('<td><!--fk-12-07', "<td class='fk-todo'>Moms för Maj<!--fk-12-07", $this->html);
+			$this->html = str_replace('<td><!--fk-12-09', "<td class='fk-todo'>Moms för Jul<!--fk-12-09", $this->html);
+			$this->html = str_replace('<td><!--fk-12-10', "<td class='fk-todo'>Moms för Aug<!--fk-12-10", $this->html);
+			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms för Sep<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><!--fk-12-12', "<td class='fk-todo'>Moms för Okt<!--fk-12-12", $this->html);
 		}
 		function add_momsperiod_year(){
 			$this->set_moms_year();
@@ -50,26 +50,26 @@
 
 		}
 		function add_momsperiod_quarter(){
-			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms<!--fk-12-feb", $this->html);
-			$this->html = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms<!--fk-12-maj", $this->html);
-			$this->html = str_replace('<td><!--fk-18-aug', "<td class='fk-todo'>Moms<!--fk-18-aug", $this->html);
-			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms<!--fk-12-nov", $this->html);
+			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms för kvartal 4<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms för kvartal 1<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><!--fk-18-08', "<td class='fk-todo'>Moms för kvartal 2<!--fk-18-08", $this->html);
+			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms för kvartal 3<!--fk-12-11", $this->html);
 		}
 		function add_moms_and_time_17(){
-			$this->html = str_replace('<td><!--fk-17-jan', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-jan", $this->html);
-			$this->html = str_replace('<td><!--fk-17-aug', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-aug", $this->html);
+			$this->html = str_replace('<td><!--fk-17-01', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-01", $this->html);
+			$this->html = str_replace('<td><!--fk-17-08', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-08", $this->html);
 		}
 		function add_moms_and_time_12(){
-			$this->html = str_replace('<td><!--fk-12-feb', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-feb", $this->html);
-			$this->html = str_replace('<td><!--fk-12-mar', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-mar", $this->html);
-			$this->html = str_replace('<td><!--fk-12-apr', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-apr", $this->html);
-			$this->html = str_replace('<td><!--fk-12-maj', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-maj", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jun', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-jun", $this->html);
-			$this->html = str_replace('<td><!--fk-12-jul', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-jul", $this->html);
-			$this->html = str_replace('<td><!--fk-12-sep', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-sep", $this->html);
-			$this->html = str_replace('<td><!--fk-12-okt', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-okt", $this->html);
-			$this->html = str_replace('<td><!--fk-12-nov', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-nov", $this->html);
-			$this->html = str_replace('<td><!--fk-12-dec', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-dec", $this->html);
+			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><!--fk-12-03', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-03", $this->html);
+			$this->html = str_replace('<td><!--fk-12-04', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-04", $this->html);
+			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><!--fk-12-06', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-06", $this->html);
+			$this->html = str_replace('<td><!--fk-12-07', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-07", $this->html);
+			$this->html = str_replace('<td><!--fk-12-09', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-09", $this->html);
+			$this->html = str_replace('<td><!--fk-12-10', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-10", $this->html);
+			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><!--fk-12-12', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-12", $this->html);
 		}
 		
 		function add_declaration(){
@@ -84,8 +84,8 @@
 		function add_extra(){
 			// get month with 0
 			$extra_day = substr($this->extraDate, 8);
-			//send in number month and get abr, i.e. 01 = 'jan'
-			$extra_month = $this->date_conversion(substr($this->extraDate, 5, 2));
+			//send in number month and get abr, i.e. 01 = '01'
+			$extra_month = substr($this->extraDate, 5, 2);
 			//if day is 12, 18, same as timereport, same as declaratuion, add without adding fk-todo class.
 			//else add data and fk-todo class.
 			if ($extra_day == 12 || $extra_day == 17 || $extra_day == $this->timeReport) {
@@ -98,13 +98,104 @@
 			}
 
 		}
+		function draw_calendar_month($month = null,$year = null){
+		    date_default_timezone_set('Europe/Stockholm');
+		    setlocale(LC_ALL, 'sv_SE');
+		    // if no arg was passed set them to current month
+		    if ($month == null) {
+		    	$month = date('m');
+		    }
+		    if ($year == null) {
+		    	$year = date('y');
+		    }
+		    // get header 
+		    $calendar = file_get_contents('../views/pdf/pdf_month_header.html');
+		    //write month
+		    $calendar = str_replace('%month%', $this->num_to_letters_month($month), $calendar);
+		    /* draw table */
+		    $calendar .= '<table class="fk-table">';
+
+		    /* table headings */
+		    $headings = array('Vecka','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag');
+		    $calendar.= '<tr class="calendar-row"><th class="calendar-day-head">'.implode('</th><th class="calendar-day-head">',$headings).'</th></tr>';
+
+		    /* days and weeks vars now ... */
+		    //mkttime makes a timestamp in sec from 1970 1jan
+		    //date(n) makes it to a number 0-7 representing mon-sun
+		    // -1 makes it the last day in the month before.
+		    $running_day = date('N',mktime(0,0,0,$month,1,$year))-1;
+		    // number of days in current month
+		    $days_in_month = date('t',mktime(0,0,0,$month,1,$year));
+		    // at least 1 day in first week
+		    $days_in_this_week = 1;
+		    $day_counter = 0;
+		    $dates_array = array();
+
+		    $week_number = date('W',mktime(0,0,0,$month,1,$year));
+
+
+		    /* row for week one */
+		    $calendar.= '<tr class="calendar-row">';
+
+		    $calendar.= '<td class="fk-week">'.$week_number. '</td>';
+		    /* print "blank" days until the first of the current week */
+		    for($x = 0; $x < $running_day; $x++):
+		        $calendar.= '<td class="fk-noday"> </td>';
+		        $days_in_this_week++;
+		    endfor;
+
+		    /* keep going with days.... */
+		    for($list_day = 1; $list_day <= $days_in_month; $list_day++):
+		        $date = $list_day;
+		        if (strlen($list_day) == 1) {
+		            $date = '0'.$list_day;
+		        }
+		        $calendar.= '<td>';
+		            //adds comment so pdf creator can change value.
+		            $calendar.= '<!--fk-'.$date.'-'.$month.'-->';
+		            /* add in the day number */
+		            $calendar.= '<div>'.$list_day.'</div>';
+
+		            
+		        $calendar.= '</td>';
+		        if($running_day == 6):
+		            $calendar.= '</tr>';
+		            if(($day_counter+1) != $days_in_month):
+		                $calendar.= '<tr class="calendar-row">';
+		                $week_number++;
+		                if (strlen($week_number) == 1) {
+		                    $week_number = '0'.$week_number;
+		                }
+		                $calendar.= '<td class="fk-week">'.$week_number. '</td>';
+		            endif;
+		            $running_day = -1;
+		            $days_in_this_week = 0;
+		        endif;
+		        $days_in_this_week++; $running_day++; $day_counter++;
+		    endfor;
+
+		    /* finish the rest of the days in the week */
+		    if($days_in_this_week < 8):
+		        for($x = 1; $x <= (8 - $days_in_this_week); $x++):
+		            $calendar.= '<td class="fk-noday"> </td>';
+		        endfor;
+		    endif;
+
+		    /* final row */
+		    $calendar.= '</tr>';
+
+		    /* end the table */
+		    $calendar.= '</table>';
+		        // get footer 
+		    $calendar .= file_get_contents('../views/pdf/pdf_month_footer.html');
+		    
+		    /* Put the result in html file */
+		    $this->html = $calendar;
+		}
 		function put_contents(){
 			file_put_contents('../views/pdf/build/pdf'.$this->guid.'.html', $this->html);
 		}
 
 
 	}
-
-
-
- ?>
+?>
