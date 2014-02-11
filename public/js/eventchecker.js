@@ -19,9 +19,16 @@ $(document).on('blur', '.fk-required', function() {
 });
 $(document).on('change', '#momsperiod', function() {
 	if (this.value == 3) {
-		$('.hideToggle').fadeIn('fast');
+		$('.hideToggleMoms').fadeIn('fast');
 	}else{
-		$('.hideToggle').fadeOut('fast');
+		$('.hideToggleMoms').fadeOut('fast');
+	}
+});
+$(document).on('change', '#pdfMonth', function() {
+	if (this.value == 'yes') {
+		$('.hideTogglePdf').fadeIn('fast');
+	}else{
+		$('.hideTogglePdf').fadeOut('fast');
 	}
 });
 
