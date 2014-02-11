@@ -11,47 +11,31 @@ body {
   padding: 0;
   width: 21cm;
   height: 29.7cm;
+  font-family: 'Raleway';
 }
 
-/* line 20, ../../../sass/pdf_month.scss */
+/* line 19, ../../../sass/pdf_month.scss */
 h1 {
   font-size: 3rem;
 }
 
-/* line 24, ../../../sass/pdf_month.scss */
+/* line 23, ../../../sass/pdf_month.scss */
 h2 {
   font-size: 2rem;
 }
 
-/* line 27, ../../../sass/pdf_month.scss */
+/* line 26, ../../../sass/pdf_month.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 30, ../../../sass/pdf_month.scss */
+/* line 29, ../../../sass/pdf_month.scss */
 p {
   font-size: 14px;
 }
 
-/* line 34, ../../../sass/pdf_month.scss */
-.clearfix {
-  *zoom: 1;
-}
-
-/* line 34, ../../../sass/pdf_month.scss */
-.clearfix:before, .clearfix:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-
-/* line 34, ../../../sass/pdf_month.scss */
-.clearfix:after {
-  clear: both;
-}
-
 /* Printable area */
-/* line 37, ../../../sass/pdf_month.scss */
+/* line 34, ../../../sass/pdf_month.scss */
 #print-area {
   position: relative;
   top: 1cm;
@@ -61,19 +45,19 @@ p {
   font-size: 10px;
 }
 
-/* line 47, ../../../sass/pdf_month.scss */
+/* line 44, ../../../sass/pdf_month.scss */
 .header {
   margin-bottom: 20px;
 }
-/* line 49, ../../../sass/pdf_month.scss */
+/* line 46, ../../../sass/pdf_month.scss */
 .header h1 {
   margin-top: 0.5cm;
 }
-/* line 52, ../../../sass/pdf_month.scss */
+/* line 49, ../../../sass/pdf_month.scss */
 .header h3 {
   font-style: italic;
 }
-/* line 55, ../../../sass/pdf_month.scss */
+/* line 52, ../../../sass/pdf_month.scss */
 .header img {
   position: absolute;
   top: 0;
@@ -81,69 +65,49 @@ p {
   right: 0.5cm;
 }
 
-/* calendar */
-/* line 65, ../../../sass/pdf_month.scss */
-table.calendar {
-  border-left: 1px solid #999;
-}
-
-/* line 67, ../../../sass/pdf_month.scss */
-td.calendar-day {
-  min-height: 80px;
-  font-size: 11px;
+/* line 59, ../../../sass/pdf_month.scss */
+.fk-table {
+  margin: 0 auto;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 110%;
+  width: auto;
+  overflow: auto;
+  display: block;
+  letter-spacing: 0.0825em;
   position: relative;
 }
-
-/* line 67, ../../../sass/pdf_month.scss */
-* html div.calendar-day {
-  height: 80px;
-}
-
-/* line 68, ../../../sass/pdf_month.scss */
-td.calendar-day:hover {
-  background: #eceff5;
-}
-
 /* line 69, ../../../sass/pdf_month.scss */
-td.calendar-day-np {
-  background: #eee;
-  min-height: 80px;
-}
-
-/* line 69, ../../../sass/pdf_month.scss */
-* html div.calendar-day-np {
-  height: 80px;
-}
-
-/* line 70, ../../../sass/pdf_month.scss */
-td.calendar-day-head {
-  background: #ccc;
-  font-weight: bold;
-  text-align: center;
-  width: 120px;
-  padding: 5px;
-  border-bottom: 1px solid #999;
-  border-top: 1px solid #999;
-  border-right: 1px solid #999;
-}
-
-/* line 71, ../../../sass/pdf_month.scss */
-div.day-number {
-  background: #999;
-  padding: 5px;
-  color: #fff;
-  font-weight: bold;
-  float: right;
-  margin: -5px -5px 0 0;
-  width: 20px;
+.fk-table th {
+  font-size: 120%;
+  background-color: #70c469;
+  font-weight: normal;
+  color: white;
+  padding: 12px 19px;
   text-align: center;
 }
-
-/* shared */
-/* line 73, ../../../sass/pdf_month.scss */
-td.calendar-day, td.calendar-day-np {
-  width: 120px;
-  padding: 5px;
-  border-bottom: 1px solid #999;
-  border-right: 1px solid #999;
+/* line 77, ../../../sass/pdf_month.scss */
+.fk-table td {
+  position: relative;
+  background-color: #eeeeee;
+  padding: 15px 15px;
+  color: #6f6f6f;
+}
+/* line 82, ../../../sass/pdf_month.scss */
+.fk-table td div {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+/* line 88, ../../../sass/pdf_month.scss */
+.fk-table .fk-week {
+  border: 1px solid #b3b3b3;
+}
+/* line 91, ../../../sass/pdf_month.scss */
+.fk-table .fk-noday {
+  background: #d4d4d4;
+}
+/* line 94, ../../../sass/pdf_month.scss */
+.fk-table .fk-todo {
+  background: #ffcccc;
 }

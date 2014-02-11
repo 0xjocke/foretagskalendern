@@ -13,8 +13,7 @@ body {
     padding:    0;
     width:      21cm;
     height:     29.7cm;
-    // font-family: 'Raleway';
-
+    font-family: 'Raleway';
 }
 
 h1{
@@ -30,8 +29,6 @@ h3{
 p{
     font-size:14px
 }
-
-.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}
 
 /* Printable area */
 #print-area {
@@ -59,15 +56,42 @@ p{
         right: 0.5cm;
     }
 }
-
-
-/* calendar */
-table.calendar		{ border-left:1px solid #999; }
-tr.calendar-row	{  }
-td.calendar-day	{ min-height:80px; font-size:11px; position:relative; } * html div.calendar-day { height:80px; }
-td.calendar-day:hover	{ background:#eceff5; }
-td.calendar-day-np	{ background:#eee; min-height:80px; } * html div.calendar-day-np { height:80px; }
-td.calendar-day-head { background:#ccc; font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #999; border-top:1px solid #999; border-right:1px solid #999; }
-div.day-number		{ background:#999; padding:5px; color:#fff; font-weight:bold; float:right; margin:-5px -5px 0 0; width:20px; text-align:center; }
-/* shared */
-td.calendar-day, td.calendar-day-np { width:120px; padding:5px; border-bottom:1px solid #999; border-right:1px solid #999; }
+.fk-table {
+	margin: 0 auto;
+	font-family: sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 110%;
+	width: auto;
+	overflow: auto;
+	display: block;
+	letter-spacing: 0.0825em;
+	position: relative;
+    th {
+    	font-size: 120%;
+        background-color: rgb(112, 196, 105);
+        font-weight: normal;
+        color: white;
+        padding: 12px 19px;
+        text-align: center;
+    }
+    td {
+    	position: relative;
+        background-color: rgb(238, 238, 238);
+        padding: 15px 15px;
+        color: rgb(111, 111, 111);
+        div{
+			position: absolute;
+			top: 2px;
+			right: 5px;
+        }
+    }
+    .fk-week{
+		border: 1px solid darken(white, 30%);
+    }
+    .fk-noday{
+    	background: darken(rgb(238, 238, 238),10%);
+    }
+    .fk-todo{
+        background: lighten(red, 40%);
+    }
+}
