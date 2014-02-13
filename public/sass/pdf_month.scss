@@ -23,6 +23,11 @@ h1{
 h2{
     font-size: 2rem;
 }
+.fk-monthh2{
+
+	text-align:center;
+	margin-top: 80px;
+}
 h3{
     font-size: 16px;
 }
@@ -37,6 +42,7 @@ p{
     left:       0.5cm;
     width:      19cm;
     height:     27.6cm;
+    margin: 0 auto;
 
     font-size:      10px;
 }
@@ -56,6 +62,7 @@ p{
         right: 0.5cm;
     }
 }
+
 .fk-table {
 	margin: 0 auto;
 	font-family: sans-serif;
@@ -65,7 +72,6 @@ p{
 	overflow: auto;
 	display: block;
 	letter-spacing: 0.0825em;
-	position: relative;
     th {
     	font-size: 120%;
         background-color: rgb(112, 196, 105);
@@ -75,23 +81,32 @@ p{
         text-align: center;
     }
     td {
-    	position: relative;
-        background-color: rgb(238, 238, 238);
-        padding: 15px 15px;
-        color: rgb(111, 111, 111);
-        div{
-			position: absolute;
-			top: 2px;
-			right: 5px;
+    	div{
+	    	position: relative;
+	        background-color: rgb(238, 238, 238);
+	        padding: 20px 15px 12px 15px;
+	        color: rgb(111, 111, 111);
+	        min-height: 25px;
+    	}
+        .fk-datenum{
+        	position: absolute;
+        	top: 3px;
+        	right: 5px;
+        	padding:1px;
+        	min-height: 0;
+        	text-align: center;
+        	background: none;
         }
     }
     .fk-week{
 		border: 1px solid darken(white, 30%);
+		min-height: 23px;
     }
     .fk-noday{
-    	background: darken(rgb(238, 238, 238),10%);
+    	background: darken(rgb(238, 238, 238),0%);
     }
     .fk-todo{
         background: lighten(red, 40%);
     }
+
 }

@@ -27,49 +27,49 @@
 			$this->html = str_replace('%name%', $_POST['name'], $this->html);
 		}
 		function add_time_report(){
-			$this->html = str_replace('<td><!--fk-'.$this->timeReport.'-', "<td class='fk-todo'>Tidsrapport<!--fk-".$this->timeReport."-", $this->html);
+			$this->html = str_replace('<td><div><!--fk-'.$this->timeReport.'-', "<td><div class='fk-todo'>Tidsrapport<!--fk-".$this->timeReport."-", $this->html);
 		}
 		
 		function add_momsperiod_month(){
-			$this->html = str_replace('<td><!--fk-17-01', "<td class='fk-todo'>Moms för Nov<!--fk-17-01", $this->html);
-			$this->html = str_replace('<td><!--fk-17-08', "<td class='fk-todo'>Moms för Jun<!--fk-17-08", $this->html);
-			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms för Dec<!--fk-12-02", $this->html);
-			$this->html = str_replace('<td><!--fk-12-03', "<td class='fk-todo'>Moms för Jan<!--fk-12-03", $this->html);
-			$this->html = str_replace('<td><!--fk-12-04', "<td class='fk-todo'>Moms för Feb<!--fk-12-04", $this->html);
-			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms för Mar<!--fk-12-05", $this->html);
-			$this->html = str_replace('<td><!--fk-12-06', "<td class='fk-todo'>Moms för Apr<!--fk-12-06", $this->html);
-			$this->html = str_replace('<td><!--fk-12-07', "<td class='fk-todo'>Moms för Maj<!--fk-12-07", $this->html);
-			$this->html = str_replace('<td><!--fk-12-09', "<td class='fk-todo'>Moms för Jul<!--fk-12-09", $this->html);
-			$this->html = str_replace('<td><!--fk-12-10', "<td class='fk-todo'>Moms för Aug<!--fk-12-10", $this->html);
-			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms för Sep<!--fk-12-11", $this->html);
-			$this->html = str_replace('<td><!--fk-12-12', "<td class='fk-todo'>Moms för Okt<!--fk-12-12", $this->html);
+			$this->html = str_replace('<td><div><!--fk-17-01', "<td><div class='fk-todo'>Moms för Nov<!--fk-17-01", $this->html);
+			$this->html = str_replace('<td><div><!--fk-17-08', "<td><div class='fk-todo'>Moms för Jun<!--fk-17-08", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-02', "<td><div class='fk-todo'>Moms för Dec<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-03', "<td><div class='fk-todo'>Moms för Jan<!--fk-12-03", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-04', "<td><div class='fk-todo'>Moms för Feb<!--fk-12-04", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-05', "<td><div class='fk-todo'>Moms för Mar<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-06', "<td><div class='fk-todo'>Moms för Apr<!--fk-12-06", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-07', "<td><div class='fk-todo'>Moms för Maj<!--fk-12-07", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-09', "<td><div class='fk-todo'>Moms för Jul<!--fk-12-09", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-10', "<td><div class='fk-todo'>Moms för Aug<!--fk-12-10", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-11', "<td><div class='fk-todo'>Moms för Sep<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-12', "<td><div class='fk-todo'>Moms för Okt<!--fk-12-12", $this->html);
 		}
 		function add_momsperiod_year(){
 			$this->set_moms_year();
-			$this->html = str_replace('<td><!--fk-'. $this->moms_payment_year, "<td class='fk-todo'>Moms<!--fk-" . $this->moms_payment_year, $this->html);
+			$this->html = str_replace('<td><div><!--fk-'. $this->moms_payment_year, "<div  class='fk-todo'><td>Moms<!--fk-" . $this->moms_payment_year, $this->html);
 
 		}
 		function add_momsperiod_quarter(){
-			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms för kvartal 4<!--fk-12-02", $this->html);
-			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms för kvartal 1<!--fk-12-05", $this->html);
-			$this->html = str_replace('<td><!--fk-18-08', "<td class='fk-todo'>Moms för kvartal 2<!--fk-18-08", $this->html);
-			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms för kvartal 3<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-02', "<div class='fk-todo'><td>Moms för kvartal 4<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-05', "<div class='fk-todo'><td>Moms för kvartal 1<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><div><!--fk-18-08', "<div class='fk-todo'><td>Moms för kvartal 2<!--fk-18-08", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-11', "<div class='fk-todo'><td>Moms för kvartal 3<!--fk-12-11", $this->html);
 		}
 		function add_moms_and_time_17(){
-			$this->html = str_replace('<td><!--fk-17-01', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-01", $this->html);
-			$this->html = str_replace('<td><!--fk-17-08', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-17-08", $this->html);
+			$this->html = str_replace('<td><div><!--fk-17-01', "<div class='fk-todo'><td>Moms,<br>Tidsrapport<!--fk-17-01", $this->html);
+			$this->html = str_replace('<td><div><!--fk-17-08', "<div class='fk-todo'><td>Moms,<br>Tidsrapport<!--fk-17-08", $this->html);
 		}
 		function add_moms_and_time_12(){
-			$this->html = str_replace('<td><!--fk-12-02', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-02", $this->html);
-			$this->html = str_replace('<td><!--fk-12-03', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-03", $this->html);
-			$this->html = str_replace('<td><!--fk-12-04', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-04", $this->html);
-			$this->html = str_replace('<td><!--fk-12-05', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-05", $this->html);
-			$this->html = str_replace('<td><!--fk-12-06', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-06", $this->html);
-			$this->html = str_replace('<td><!--fk-12-07', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-07", $this->html);
-			$this->html = str_replace('<td><!--fk-12-09', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-09", $this->html);
-			$this->html = str_replace('<td><!--fk-12-10', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-10", $this->html);
-			$this->html = str_replace('<td><!--fk-12-11', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-11", $this->html);
-			$this->html = str_replace('<td><!--fk-12-12', "<td class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-12", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-02', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-03', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-03", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-04', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-04", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-05', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-06', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-06", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-07', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-07", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-09', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-09", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-10', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-10", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-11', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-12', "<td><div class='fk-todo'>Moms,<br>Tidsrapport<!--fk-12-12", $this->html);
 		}
 		
 		function add_declaration(){
@@ -77,7 +77,7 @@
 			if ($this->declaration_day == $this->timeReport ) {
 				$this->html = str_replace('<!--fk-' . $this->declaration_day . '-' . $this->declaration_month,',<br> Deklaration <!--', $this->html);
 			}else{
-				$this->html = str_replace('<td><!--fk-'.$this->declaration_day.'-'.$this->declaration_month,"<td class='fk-todo'>Deklaration <!--", $this->html);
+				$this->html = str_replace('<td><div><!--fk-'.$this->declaration_day.'-'.$this->declaration_month,"<td><div class='fk-todo'>Deklaration <!--", $this->html);
 			}	
 		}
 	
@@ -94,7 +94,7 @@
 				$this->html = str_replace('<!--fk-'.$extra_day.'-'.$extra_month, ',<br>' . $this->extra . "<!--".$extra_day.'-'.$extra_month , $this->html);
 			}
 			else{
-				$this->html = str_replace('<td><!--fk-'.$extra_day.'-'.$extra_month, "<td class='fk-todo'>". $this->extra . '<!--' , $this->html);
+				$this->html = str_replace('<td><div><!--fk-'.$extra_day.'-'.$extra_month, "<div class='fk-todo'><td>". $this->extra . '<!--' , $this->html);
 			}
 
 		}
@@ -137,10 +137,10 @@
 		    /* row for week one */
 		    $calendar.= '<tr class="calendar-row">';
 
-		    $calendar.= '<td class="fk-week">'.$week_number. '</td>';
+		    $calendar.= '<td><div class="fk-week">'.$week_number. '</div></td>';
 		    /* print "blank" days until the first of the current week */
 		    for($x = 0; $x < $running_day; $x++):
-		        $calendar.= '<td class="fk-noday"> </td>';
+		        $calendar.= '<td><div class="fk-noday"> </div></td>';
 		        $days_in_this_week++;
 		    endfor;
 
@@ -152,9 +152,9 @@
 		        }
 		        $calendar.= '<td>';
 		            //adds comment so pdf creator can change value.
-		            $calendar.= '<!--fk-'.$date.'-'.$month.'-->';
+		            $calendar.= '<div><!--fk-'.$date.'-'.$month.'-->';
 		            /* add in the day number */
-		            $calendar.= '<div>'.$list_day.'</div>';
+		            $calendar.= '<div class="fk-datenum">'.$list_day.'</div></div>';
 
 		            
 		        $calendar.= '</td>';
@@ -166,7 +166,7 @@
 		                if (strlen($week_number) == 1) {
 		                    $week_number = '0'.$week_number;
 		                }
-		                $calendar.= '<td class="fk-week">'.$week_number. '</td>';
+		                $calendar.= '<td><div class="fk-week">'.$week_number. '</td></div>';
 		            endif;
 		            $running_day = -1;
 		            $days_in_this_week = 0;
@@ -177,7 +177,7 @@
 		    /* finish the rest of the days in the week */
 		    if($days_in_this_week < 8):
 		        for($x = 1; $x <= (8 - $days_in_this_week); $x++):
-		            $calendar.= '<td class="fk-noday"> </td>';
+		            $calendar.= '<td><div class="fk-noday"></div> </td>';
 		        endfor;
 		    endif;
 

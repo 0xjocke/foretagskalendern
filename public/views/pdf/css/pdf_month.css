@@ -25,39 +25,46 @@ h2 {
 }
 
 /* line 26, ../../../sass/pdf_month.scss */
+.fk-monthh2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* line 31, ../../../sass/pdf_month.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 29, ../../../sass/pdf_month.scss */
+/* line 34, ../../../sass/pdf_month.scss */
 p {
   font-size: 14px;
 }
 
 /* Printable area */
-/* line 34, ../../../sass/pdf_month.scss */
+/* line 39, ../../../sass/pdf_month.scss */
 #print-area {
   position: relative;
   top: 1cm;
   left: 0.5cm;
   width: 19cm;
   height: 27.6cm;
+  margin: 0 auto;
   font-size: 10px;
 }
 
-/* line 44, ../../../sass/pdf_month.scss */
+/* line 50, ../../../sass/pdf_month.scss */
 .header {
   margin-bottom: 20px;
 }
-/* line 46, ../../../sass/pdf_month.scss */
+/* line 52, ../../../sass/pdf_month.scss */
 .header h1 {
   margin-top: 0.5cm;
 }
-/* line 49, ../../../sass/pdf_month.scss */
+/* line 55, ../../../sass/pdf_month.scss */
 .header h3 {
   font-style: italic;
 }
-/* line 52, ../../../sass/pdf_month.scss */
+/* line 58, ../../../sass/pdf_month.scss */
 .header img {
   position: absolute;
   top: 0;
@@ -65,7 +72,7 @@ p {
   right: 0.5cm;
 }
 
-/* line 59, ../../../sass/pdf_month.scss */
+/* line 66, ../../../sass/pdf_month.scss */
 .fk-table {
   margin: 0 auto;
   font-family: sans-serif;
@@ -75,9 +82,8 @@ p {
   overflow: auto;
   display: block;
   letter-spacing: 0.0825em;
-  position: relative;
 }
-/* line 69, ../../../sass/pdf_month.scss */
+/* line 75, ../../../sass/pdf_month.scss */
 .fk-table th {
   font-size: 120%;
   background-color: #70c469;
@@ -86,28 +92,34 @@ p {
   padding: 12px 19px;
   text-align: center;
 }
-/* line 77, ../../../sass/pdf_month.scss */
-.fk-table td {
+/* line 84, ../../../sass/pdf_month.scss */
+.fk-table td div {
   position: relative;
   background-color: #eeeeee;
-  padding: 15px 15px;
+  padding: 20px 15px 12px 15px;
   color: #6f6f6f;
-}
-/* line 82, ../../../sass/pdf_month.scss */
-.fk-table td div {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-}
-/* line 88, ../../../sass/pdf_month.scss */
-.fk-table .fk-week {
-  border: 1px solid #b3b3b3;
+  min-height: 25px;
 }
 /* line 91, ../../../sass/pdf_month.scss */
-.fk-table .fk-noday {
-  background: #d4d4d4;
+.fk-table td .fk-datenum {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 1px;
+  min-height: 0;
+  text-align: center;
+  background: none;
 }
-/* line 94, ../../../sass/pdf_month.scss */
+/* line 101, ../../../sass/pdf_month.scss */
+.fk-table .fk-week {
+  border: 1px solid #b3b3b3;
+  min-height: 23px;
+}
+/* line 105, ../../../sass/pdf_month.scss */
+.fk-table .fk-noday {
+  background: #eeeeee;
+}
+/* line 108, ../../../sass/pdf_month.scss */
 .fk-table .fk-todo {
   background: #ffcccc;
 }

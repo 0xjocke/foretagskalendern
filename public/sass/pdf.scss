@@ -24,6 +24,7 @@ h1{
 h2{
     font-size: 2rem;
 }
+
 h3{
     font-size: 16px;
 }
@@ -34,7 +35,7 @@ p{
 /* Printable area */
 #print-area {
    position:   relative;
-    top:        1cm;
+    top:        0.5cm;
     width:      19cm;
     height:     27.6cm;
 	margin-left: 0.5cm;
@@ -44,7 +45,7 @@ p{
 .header {
     margin-bottom: 20px;
     h1{
-        margin-top: 0.5cm;
+        margin-top: 0.2cm;
     }
     h3{
         font-style: italic;
@@ -62,14 +63,13 @@ p{
 /*Kalender*/
 
 .fk-table {
-    margin: 1cm 0;
+    margin: 0.5cm 0 1cm -10px;
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 90%;
     width: auto;
     overflow: auto;
     display: block;
-   letter-spacing: 0.0825em;
     th {
         background-color: rgb(112, 196, 105);
         font-weight: normal;
@@ -78,19 +78,19 @@ p{
         text-align: center;
     }
     td {
-    	position: relative;
-        background-color: rgb(238, 238, 238);
-        padding: 5px 7.5px;
-        color: rgb(111, 111, 111);
-        div{
-        	position: absolute;
-        	top: 0;
-        	right: 0;
-        }
+    		background-color: rgb(238, 238, 238);
+    	div{
+	    	position: relative;
+	        background-color: rgb(238, 238, 238);
+	        padding: 5px 7.5px;
+	        color: rgb(111, 111, 111);
+    	}
     }
-    .fk-datum{
-        padding:2px 5px;
-        text-align: center;
+    .fk-datum-white{
+    	background: white;
+    	// display: table-cell;
+     //    padding:2px 5px;
+     //    text-align: center;
     }
     .fk-dark{
         background: darken(white, 40%);
