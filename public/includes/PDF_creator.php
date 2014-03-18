@@ -50,10 +50,10 @@
 
 		}
 		function add_momsperiod_quarter(){
-			$this->html = str_replace('<td><div><!--fk-12-02', "<div class='fk-todo'><td>Moms för kvartal 4<!--fk-12-02", $this->html);
-			$this->html = str_replace('<td><div><!--fk-12-05', "<div class='fk-todo'><td>Moms för kvartal 1<!--fk-12-05", $this->html);
-			$this->html = str_replace('<td><div><!--fk-18-08', "<div class='fk-todo'><td>Moms för kvartal 2<!--fk-18-08", $this->html);
-			$this->html = str_replace('<td><div><!--fk-12-11', "<div class='fk-todo'><td>Moms för kvartal 3<!--fk-12-11", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-02', "<td><div class='fk-todo'>Moms för kvartal 4<!--fk-12-02", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-05', "<td><div class='fk-todo'>Moms för kvartal 1<!--fk-12-05", $this->html);
+			$this->html = str_replace('<td><div><!--fk-18-08', "<td><div class='fk-todo'>Moms för kvartal 2<!--fk-18-08", $this->html);
+			$this->html = str_replace('<td><div><!--fk-12-11', "<td><div class='fk-todo'>Moms för kvartal 3<!--fk-12-11", $this->html);
 		}
 		function add_moms_and_time_17(){
 			$this->html = str_replace('<td><div><!--fk-17-01', "<div class='fk-todo'><td>Moms,<br>Tidsrapport<!--fk-17-01", $this->html);
